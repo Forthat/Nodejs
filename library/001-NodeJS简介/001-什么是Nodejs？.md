@@ -21,15 +21,24 @@ Node.JS是一个让开发者可以快速创建网络应用的服务器端JavaScr
 
 - 无缓冲 - Node.js的应用从来没有缓冲任何数据。这些应用程序只需输出块中的数据
 
-### common.js
+### 统一在Javascript浏览器之外的实现， CommonJS
 早在Netscape诞生不久后，JavaScript就一直在探索本地编程的路。无奈那时服务端JavaScript走的路均是参考众多服务器端语言来实现的，在这样的背景之下，一没有特色，二没有实用价值。但是随着JavaScript在前端的应用越来越广泛，以及服务端JavaScript的推动，JavaScript现有的规范十分薄弱，不利于JavaScript大规模的应用。那些以JavaScript为宿主语言的环境中，只有本身的基础原生对象和类型，更多的对象和API都取决于宿主的提供，所以，我们可以看到JavaScript缺少这些功能：
 
 - JavaScript没有模块系统。没有原生的支持密闭作用域或依赖管理。
 - JavaScript没有标准库。除了一些核心库外，没有文件系统的API，没有IO流API等。
 - JavaScript没有标准接口。没有如Web Server或者数据库的统一接口。
-- JavaScript没有包管理系统。不能自动加载和安装依赖。  
-
+- JavaScript没有包管理系统。不能自动加载和安装依赖。
 
 于是便有了[CommonJS(http://www.commonjs.org)](http://www.commonjs.org)规范的出现，其目标是为了构建JavaScript在包括Web服务器，桌面，命令行工具，及浏览器方面的生态系统。
 
+CommonJS试图定义一套普通应用程序使用的API，从而填补Javascript标准库过于简单的不足。CommonJS的终极目标是制定一个像C++标准库一样的规范，使得基于CommonJS API的应用程序可以在不同的环境下运行，就像用C++编写的应用程序可以使用不同的编译器和运行时函数库一样。
+
+CommonJS规范： 模块，包，系统，二进制，控制台，编码，文件系统，套接字，单元测试等。
+
+NodeJS是CommonJS规范最热门的一个实现。  
 CommonJS制定了解决这些问题的一些规范，而Node.js就是这些规范的一种实现。Node.js自身实现了require方法作为其引入模块的方法，同时NPM也基于CommonJS定义的包规范，实现了依赖管理和模块自动安装等功能。
+
+### 常用框架
+- express:完善、出现早、文档全、社区大
+- koa:超前，完善中
+- hapi：复杂，适合大型项目

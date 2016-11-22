@@ -8,8 +8,8 @@ Windows系统下，选择和系统版本匹配的.msi后缀的安装文件。Mac
 ### 管理Nodejs版本
 n是Node的一个模块，作者是TJ Holowaychuk（鼎鼎大名的Express框架作者），就像它的名字一样，它的理念就是简单：
 
-"no subshells, no profile setup, no convoluted api, just simple"
-node有一个模块叫n，是专门用来管理node.js的版本的。
+"no subshells, no profile setup, no convoluted api, just simple"   
+n模块是专门用来管理node.js的版本的。
 安装n模块：
 ```
 npm install n -g
